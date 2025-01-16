@@ -44,6 +44,11 @@ function TicTacToe() {
       return;
     }
 
+    if (newBoard.every((cell) => cell !== null)) {
+        setWinner("Draw");
+        return;
+      }
+
     setCurrentPlayer((prevPlayer) => (prevPlayer === "X" ? "O" : "X"));
   };
 
